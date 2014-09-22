@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Многопользовательская графическая интернет-игра</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <header><h1>Многопользовательская графическая интернет-игра</h1></header>
+ <div id='con'>
+	<!-- Выбрать цветовую палитру -->
+	<div class=tools>
+		<div id="tool1" title = "Цветавая палитра"></div>
+		<div id="tool2" title="Карандаш"></div>
+		<div id="tool3" title="Ластик"></div>
+		<!--<div id="tool4" title="Текст"></div>
+		<div id="tool5" title="Фигура"></div>-->
+		<div id="tool6" title="Пипетка"></div>
+		<div id="tool7" title="Размер курсора"><input id="slider1" type="range" min="0" max="100" step="2" value="2"> </div>
+	</div>
+	<div class="colorpicker" style="display:none;top:24px">
+	
+	<canvas id="picker" var="2" width="300" height="300"></canvas>
+	
+	<div class="controls">
+		<div><label>R</label> <input type="text" id="rVal" /></div>
+		<div><label>G</label> <input type="text" id="gVal" /></div>
+		<div><label>B</label> <input type="text" id="bVal" /></div>
+		<div><label>RGB</label> <input type="text" id="rgbVal" /></div>
+		<div><label>HEX</label> <input type="text" id="hexVal" /></div>
+	</div>
+	</div>
+	<br>
+	<!-- Холст и управление -->
+	<div id='drawing'>
+		<!-- Холст для рисования-->
+		<canvas id='drawing-pad' height='300px' width = '500px'>
+		</canvas>
+		<!-- Упралвение игрой  -->
+		<button id="restart">Новая игра</button>
+		<!--
+		<button id="buttonSaveImage">Сохранить рисунок</button>
+		-->
+		<canvas id="drawing-none" var="2" width="100" height="60">
+		</canvas>
+		
+	</div>
+	<div class="listchat">
+
+	</div>
+	<!-- Сообщения от сервера -->
+	<div class="chat">
+		<textarea class="row" id="chat-history" name="logareaname" style="width: 500px; height: 100px;">
+		
+		</textarea>
+	</div>
+	<!-- Сообщение серверу -->
+	<div class="sendmessage">
+		<label for="chat-input">Сообщение:</label> 
+		<input type="text" id="chat-input" name="chat-input">
+		<button id="send">Отправить</button>
+
+	</div><br><br>
+	<div class="listusers">
+		<label for="listusers">В сети:</label> 
+	</div>
+	<!-- Прошлые рисунки -->
+	<div class="images">
+
+	<!--<p><img id="largeImg" src="img1-lg.jpg" alt="Large image"></p>-->
+	<label for="listusers">Прошлые рисунки:</label>
+	<ul id="thumbs">
+	  <!-- При наведении на изображение показывается встроенная подсказка браузера (title) -->
+	  <li><a title="Image1"><img id="Image1" name="myImage" width="100" height="60" ></a></li>
+	  <li><a title="Image2"><img id="Image2" name="myImage" width="100" height="60" ></a></li>
+	  <li><a title="Image3"><img id="Image3" name="myImage" width="100" height="60" ></a></li>
+	  <li><a title="Image4"><img id="Image4" name="myImage" width="100" height="60" ></a></li>
+	</ul>
+
+	</div>
+	
+	
+	
+ </div>
+<script src='js/jquery-1.6.min.js'></script>
+<script src='js/game.js'></script>
+
+</body>
+</html>
