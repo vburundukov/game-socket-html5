@@ -127,7 +127,7 @@ wsServer.on('request', function(request) {
 	statdata.message1 = message1;
 	wsServer.broadcast(JSON.stringify(statdata));
 	
-	// отправка сообщения всем игрокам от сервера клиенту о том, что необходимо дождатся подключение другого игрока.
+	// отправка сообщения всем игрокам от сервера клиенту о том, что необходимо дождаться подключение другого игрока.
 	var Logic = {};
 	Logic.dataType = GAME_LOGIC;
 	Logic.gameState = WAITING_TO_START;
@@ -146,7 +146,7 @@ wsServer.on('request', function(request) {
 				history.push(data);
 				
 			}else if (data.dataType == SAVE_IMAGE) {
-				console.log("Соханяем historyImage");
+				console.log("Сохраняем historyImage");
 				//historyImage.push(data);
 			}
         } catch (e) {
@@ -272,7 +272,7 @@ wsServer.on('request', function(request) {
 	
 function startGame(clearScores) {
 	//clearTimeout(gameOverTimeout);
-	// создаем массив и помещаем всех кто подлючен к серверу в него.
+	// создаем массив и помещаем всех кто подключен к серверу в него.
 	var array = [];
 	Object.keys(connections).forEach(function(key) {
         var connection = connections[key];
@@ -288,7 +288,7 @@ function startGame(clearScores) {
 	var newkey = Math.floor( Math.random() * array.length );
 	// и выбираем его из массива
 	var GamerTurn = array[newkey];
-	console.log(GamerTurn+"- номер подкюченного игрока\n");
+	console.log(GamerTurn+"- номер подключенного игрока\n");
 	
 	// также как игрока выбираем слово для следующей игры
 	var answerIndex = Math.floor(Math.random() * wordsList.length);

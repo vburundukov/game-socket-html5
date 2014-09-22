@@ -57,9 +57,10 @@ var imageSrc = 'images/colorwheel1.png';
 $(function(){
 	// проверка поддержки браузером webSocket
 	if (window["WebSocket"]) {
-		// создаем подключение к сервереу WebSocket
+		// создаем подключение к серверу WebSocket
 		//Game.socket = new WebSocket("ws://127.0.0.1:8080");
-		Game.socket =  new WebSocket("ws://10.255.0.249:8070/","echo-protocol");
+		//Game.socket =  new WebSocket("ws://10.255.0.249:8070/","echo-protocol");
+		Game.socket =  new WebSocket("ws://127.0.0.1:8070","echo-protocol");
 		
 		// событие когда присоединился новый игрок
 		Game.socket.onopen = function(connection) {
