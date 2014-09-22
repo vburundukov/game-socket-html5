@@ -1,0 +1,182 @@
+		body {
+			PADDING: 0; 
+			TEXT-ALIGN: center;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		h1 {
+			text-shadow: -7px -7px 7px rgba(118, 158, 197, 0.62);
+			color: #666666;
+			font: Tahoma; 
+		}
+		#game {
+		   width: 500px;
+		   margin: 0 auto;
+		}
+		#game h1 {
+		   text-align: center;
+		   margin-bottom: 5px;
+		   text-shadow: 0px 1px 0px #fff;
+		}
+
+		#drawing-pad{
+		  border: solid 1px #c9ccd0;
+		  border-radius: 7px;
+		  box-shadow: 0 0 8px rgba(0, 0, 0, 0.14);
+		  background: #f3f4f6;
+		  overflow: auto;
+		  z-index: 10;
+		  position: relative;
+		}
+		#drawing-none{
+			display: none;
+		}
+		#nameh1{
+		  border: solid 1px #c9ccd0;
+		  border-radius: 7px;
+		  box-shadow: 0 0 8px rgba(0, 0, 0, 0.14);
+		  overflow: auto;
+		  position: relative;
+		}
+
+		#chat-history {
+		   list-style: none;
+		   padding: 0;
+		   border: 1;
+		}
+		#chat-history li {
+		   border-bottom: 1px dashed rgba(20,20,20,.2);
+		   margin: 10px 0;
+		}
+		
+		.sendmessage{
+			float: left;
+			position: relative;
+		}
+		.listusers {
+			text-align: left;
+			position: relative;
+		}
+		
+/* стили цветовой палитры */
+
+.row:nth-child(even) {
+  background: #dde;
+}
+.row:nth-child(odd) {
+  background: white;
+}
+#con {
+	margin: 20px auto;
+    position: relative;
+	width: 500px;
+}
+
+.colorpicker {
+    background-color: #222222;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #444444;
+    color: #FFFFFF;
+    font-size: 12px;
+    position: absolute;
+    width: 460px;
+	z-index: 20;
+}
+
+#picker {
+    cursor: crosshair;
+    float: left;
+    margin: 10px;
+    border: 0;
+}
+#restart {
+    float: left;
+}
+.controls {
+	
+    float: right;
+    margin: 5px;
+}
+.controls > div {
+    border: 1px solid #2F2F2F;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 5px;
+}
+.controls label {
+    float: left;
+	
+}
+.controls > div input {
+    background-color: #121212;
+    border: 1px solid #2F2F2F;
+    color: #DDDDDD;
+    float: right;
+    font-size: 10px;
+    height: 14px;
+    margin-left: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 75px;
+}
+.tools > div {
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+	margin: 1px;
+	border: 2px solid #c9ccd0;
+	float: left;
+}
+#tool1 {
+//background: url("../images/selectcolor.png") repeat scroll center center transparent;
+}
+#tool2 {
+background: url("../images/selectpen.png") repeat scroll center center transparent;
+}
+#tool3 {
+background: url("../images/eraser.png") repeat scroll center center transparent;
+}
+#tool4 {
+background: url("../images/text.png") repeat scroll center center transparent;
+}
+#tool5 {
+background: url("../images/rectangle.png") repeat scroll center center transparent;
+}
+#tool6 {
+background: url("../images/pipette.png") repeat scroll center center transparent;
+}
+#tool7{
+ width: 142px;
+}
+.images {
+   width: 500px;
+   margin: 0 auto;
+}
+
+#largeImg {
+	border: solid 1px #ccc;
+	width: 550px;
+	height: 400px;
+	padding: 5px;
+}
+
+#thumbs a {
+	border: solid 1px #ccc;
+	padding: 3px;
+	margin: 2px;
+	float: left;
+}
+
+#thumbs a:hover {
+	border-color: #FF9900;
+}
+
+#thumbs li {
+	list-style: none;
+}
+
+#thumbs {
+	margin: 0;
+	padding: 0;
+}
